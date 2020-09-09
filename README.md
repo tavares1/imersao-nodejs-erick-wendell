@@ -1,4 +1,4 @@
-# imersao-nodejs-erick-wendell
+# Imersão NodeJS - Erick Wendell
 
 Nessa imersão em NodeJS foram mostrados tópicos como: 
 - Utilização de callbacks e melhorando a escrita de código assincronio utilizando Promises e Async/Await
