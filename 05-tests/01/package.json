@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "nock": "^13.0.4"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3"
   }
 }
