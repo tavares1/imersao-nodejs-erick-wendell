@@ -33,10 +33,10 @@ class Database {
         const id = hero.id <= 2 ? hero.id : Date.now()
         
         const heroWithId = { 
-            id,
-            ...hero
+            ...hero,
+            id
         }
-
+        
         const dataModified = [
             ...data,
             heroWithId

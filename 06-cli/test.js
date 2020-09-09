@@ -5,13 +5,13 @@ const {
 
 const DEFAULT_ITEM_CADASTRAR = { 
     name: 'Flash',
-    power: 'Speed',
+    poder: 'Speed',
     id: '1'
 }
 
 const DEFAULT_ITEM_ATUALIZAR = {
     name: 'Mulher Maravilha',
-    power: 'Deusa',
+    poder: 'Deusa',
     id: '2'
 }
 
@@ -60,11 +60,11 @@ describe('Suite de manipulação de Herois.', () => {
         const expected = { 
             ...DEFAULT_ITEM_ATUALIZAR,
             name: 'batman',
-            power: 'money'
+            poder: 'money'
         }
         const newData = { 
             name: 'batman',
-            power: 'money'
+            poder: 'money'
         }
         await database.update(DEFAULT_ITEM_ATUALIZAR.id, newData)
         const [result] = await database.listar(DEFAULT_ITEM_ATUALIZAR.id)
