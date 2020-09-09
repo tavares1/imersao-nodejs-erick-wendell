@@ -12,7 +12,7 @@ async function main() {
         .option('-c, --create', 'Cadastrar um héroi')
         .option('-l, --list','Listar hérois salvos')
         .option('-d, --delete','Remover héroi pelo id')
-        .option('-u, --update [value]',"Atualiza informações um héroi")
+        .option('-u, --update',"Atualiza informações um héroi")
 
         .parse(process.argv)
     const hero = new Hero(Commander)
@@ -41,7 +41,9 @@ async function main() {
         }
 
         if (Commander.update) {
-            const idToUpdate = parseInt(Commander.update)
+            const idToUpdate = parseInt(hero.id)
+            // remover id dos dados recebidos
+            delete hero.id
             // transformar em string
             const data = JSON.stringify(hero)
             // transformar em json novamente, assim ele pega as chaves que são undefined | null e remove do objeto.
